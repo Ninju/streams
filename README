@@ -1,14 +1,14 @@
-== Streams
+== Description
 
-This is designed to be a lightweight Streams processing library written in Ruby. I intend to keep this very small (infact, it's unlikely to change at all), and have added most common methods to make it immediately useable.
+Streams is designed to be a lightweight streams processing library written in Ruby. I intend to keep this very small (infact, it's unlikely to change at all), and have added most common methods to make it immediately useable.
 
-== Example Usage
+== Example 
 
 require 'streams'
 
 class Stream
   def sieve
-    Stream.new( head ) { tail.select { | n | n % head > 0 } }
+    Stream.new( head ) { tail.select { | n | n % head > 0 }.sieve }
   end
 end
 
