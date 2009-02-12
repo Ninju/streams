@@ -1,4 +1,18 @@
+require "rubygems"
+require "rake"
+require "echoe"
+
+Echoe.new( "streams", "1.0" ) do | p |
+  p.description = ""
+  p.url = "http://github.com/Ninju/streams"
+  p.author = "Alex Watt"
+  p.email = "alex.watt@me.com"
+  p.ignore_pattern = []
+  p.development_dependencies = []
+end
+
 task :default => "spec:run"
+
 
 namespace :spec do
   task :run do
