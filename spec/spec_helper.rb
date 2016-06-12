@@ -1,7 +1,7 @@
 require 'rubygems'
-require 'spec'
-require 'mocha'
+require 'mocha/setup'
 
-Spec::Runner.configure do |config|
+RSpec.configure do |config|
   config.mock_with :mocha
+  config.expect_with(:rspec) { |c| c.syntax = :should }
 end

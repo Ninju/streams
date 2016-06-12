@@ -26,7 +26,7 @@ describe Stream do
     end
 
     it "should store the delayed tail in a block" do
-      @stream.delayed_tail.is_a?( Proc ).should be_true
+      @stream.delayed_tail.should be_kind_of Proc
     end
 
     it "should not be empty" do

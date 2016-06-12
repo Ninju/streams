@@ -13,14 +13,13 @@ end
 
 task :default => "spec:run"
 
-
 namespace :spec do
   task :run do
-    system( "spec spec/" )
+    system( "rspec spec/" )
   end
 
   task :doc do
-    system( "spec spec/ --format specdoc" )
+    system( "rspec spec/ --format specdoc" )
   end
 
   task :coverage do
