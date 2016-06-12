@@ -300,7 +300,7 @@ describe Stream do
 
     describe "Stream#any?( &block )" do
       it "should return false if the stream is empty" do
-        Stream.new.any? { | n | true }.should be_false
+        Stream.new.any? { | n | true }.should be false
       end
 
       it "should return true if any of the elements return true when passed to the block" do
@@ -308,7 +308,7 @@ describe Stream do
       end
 
       it "should return false if none of the elements return true when passed to the block" do
-        @stream.any? { | n | n < -500 }.should be_false
+        @stream.any? { | n | n < -500 }.should be false
       end
     end
 
@@ -322,7 +322,7 @@ describe Stream do
       end
 
       it "should return false if any of the elements return false when the block is applied to the element" do
-        @stream.all? { | n | n != 2 }.should be_false
+        @stream.all? { | n | n != 2 }.should be false
       end
     end
 
