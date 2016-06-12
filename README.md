@@ -29,7 +29,9 @@ end
 module Math
   PRIMES = 2.enumerate.sieve
 end
+```
 
+```ruby
 # in IRB
 > Math::PRIMES.at( 30 )
 => 127
