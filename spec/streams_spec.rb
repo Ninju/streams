@@ -48,7 +48,7 @@ describe Stream do
     end 
 
     it "should return a stream" do
-      @stream.tail.is_a?( Stream ).should be_true
+      @stream.tail.is_a?( Stream ).should be true
     end
   end
 
@@ -304,7 +304,7 @@ describe Stream do
       end
 
       it "should return true if any of the elements return true when passed to the block" do
-        @stream.any? { | n | n == 2 }.should be_true
+        @stream.any? { | n | n == 2 }.should be true
       end
 
       it "should return false if none of the elements return true when passed to the block" do
@@ -314,11 +314,11 @@ describe Stream do
 
     describe "Stream#all?( &block )" do
       it "should return true if the stream is empty" do
-        Stream.new.all? { | element | false }.should be_true
+        Stream.new.all? { | element | false }.should be true
       end
 
       it "should return true if all the elements return true when the block is applied to the element" do
-        @stream.all? { | n | n > 0 }.should be_true
+        @stream.all? { | n | n > 0 }.should be true
       end
 
       it "should return false if any of the elements return false when the block is applied to the element" do
@@ -406,11 +406,11 @@ describe Integer, "Stream helpers" do
     end
 
     it "should not contain an element less than value if the step is negative" do
-      100.enumerate_to( 0, -3 ).any? { | n | n < 0 }.should_not be_true
+      100.enumerate_to( 0, -3 ).any? { | n | n < 0 }.should_not be true
     end
 
     it "should not contain an element greater than value if the step is positive" do
-      0.enumerate_to( 100, 3 ).any? { | n | n > 100 }.should_not be_true
+      0.enumerate_to( 100, 3 ).any? { | n | n > 100 }.should_not be true
     end
 
     it "should generate the next number based on the block rather than the step" do
